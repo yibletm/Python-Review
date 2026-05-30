@@ -1,4 +1,4 @@
-with open('students.txt', 'w') as file:
+with open('students.txt', 'a') as file:
     name = input("Add your name:")
     age = input("Add your age:")
     cla = input("add your class:")

@@ -1,3 +1,4 @@
 Clair Simmons, 20, Linear Algebra
 Matthew Doughly, 21, Machine Learning
 Jonathan Clintwood, 19, Data Structures
+Moses Yiblet 19 Computer Systems
