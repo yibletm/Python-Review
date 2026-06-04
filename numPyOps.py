@@ -51,7 +51,15 @@ def meanScore(twarr1):
     return sum/div
 
 
-print(meanScore(twarr1))
+def oneStuAve(arr):
+    sum = 0
+    for ind in arr:
+        if not isinstance(ind, str):
+            sum = sum + ind
+
+    return sum/3
+
+print(oneStuAve(twarr1[0]))
 
 
 
