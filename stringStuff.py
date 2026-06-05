@@ -1,8 +1,27 @@
-inp = input("Enter a sentence: ")
-uppinp = inp.upper()
-print(uppinp)
-lowinp = inp.lower()
-print(lowinp)
-inpnum = inp.count(" ")
-print(inpnum+1) # the number of spaces plus 1 is equal to the number of words
-print(inp.replace("the", "this"))
+##uppinp = inp.upper()
+#####print(inp.replace("the", "this"))
+
+students = [{"name":"Charles", "age":19, "major":"Computer Science"}, 
+            { "name":"Conner", "age":20, "major":"Mechanical Engineering"},
+             { "name": "Sarah", "age":19, "major":"English"}]
+
+def remStu(students, name):
+    nstudents = [stud for stud in students if stud.get("name") != name] #returns everything that meets the conditnois
+    return nstudents
+    
+students = remStu(students, "Sarah")
+print(students)
+
+def addStu(students, name, age, major) :
+    students.append({"name":name, "age":age, "major":major})
+    return students
+
+def findStu(students, name):
+    fstud = [stud for stud in students if stud.get("name") == name]
+    return fstud 
+
+def printStu(students):
+    for d in students:
+        print(d)
+
+printStu(students)
