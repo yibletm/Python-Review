@@ -40,4 +40,4 @@ qy = df.query("PetalLengthCm > 5")
 print(qy.shape)
 #A total of 42 flowers
 #Answer 5
-#The mean sepal length is in the shape command call. It's 5.843333
+#The mean sepal length is in the describe all command call. It's 5.843333
