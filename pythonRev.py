@@ -5,7 +5,7 @@
 
 # Error handling is "handled" primarily by try-except clauses
 print("What kind of 3 element list do you want to make today?")
-inpint = int(input("0 for list, 1 for tuple, 2, for set, or 3 for dictionary:"))
+inpint = int(input("0 for list, 1 for tuple, and 2 for set:"))
 
 if inpint == 0:
     my_list = []
