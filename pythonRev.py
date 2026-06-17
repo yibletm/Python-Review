@@ -11,24 +11,22 @@ if inpint == 0:
     my_list = []
     for i in range(3):
         iter = i+1
-        elm = input(f"What should element {i} be?:")
+        elm = input(f"What should element {i+1} be?:")
         my_list.append(elm)
     struc = my_list
-else:
-    if inpint == 1:
-        my_list = []
+elif inpint == 1:
+    my_list = []
     for i in range(3):
         iter = i+1
         elm = input(f"What should element {i+1} be?:")
         my_list.append(elm)
-        struc = tuple(my_list)
-    else:
-        if inpint == 2:
-            my_list = []
-        for i in range(3):
-            iter = i+1
-            elm = input(f"What should element {i+1} be?:")
-            my_list.append(elm)
+    struc = tuple(my_list)
+elif inpint == 2:
+    my_list = []
+    for i in range(3):
+        iter = i+1
+        elm = input(f"What should element {i+1} be?:")
+        my_list.append(elm)
         struc = set(my_list)    
 print(struc)
 
