@@ -22,7 +22,7 @@ print(missing_values)
 new_titanic_df = titanic_df.drop(columns=['deck'])
 
 # Imputing median age for missing age data
-new_titanic_df['age'].fillna(new_titanic_df['age'].median(), inplace=True)
+new_titanic_df['age'] = new_titanic_df['age'].fillna(new_titanic_df['age'].median())
 
 # Display the number of missing values post-imputation
 missing_values_updated = new_titanic_df.isnull().sum()
