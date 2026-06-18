@@ -15,6 +15,9 @@ print(titanic.describe())
 
 # Dealing with missing values 
 
+missing_values = titanic_df.isnull().sum()
+print(missing_values)
+
 # Dropping columns with excessive missing data
 new_titanic_df = titanic_df.drop(columns=['deck'])
 
@@ -25,10 +28,10 @@ new_titanic_df['age'].fillna(new_titanic_df['age'].median(), inplace=True)
 missing_values_updated = new_titanic_df.isnull().sum()
 print(missing_values_updated)
 
-x = titanic.drop('Survived', axis=1) # drop removes the entirity of specifically the Survived column (while axis depicts how many columns)
+x = new_titanic_df.drop('Survived', axis=1) # drop removes the entirity of specifically the Survived column (while axis depicts how many columns)
 #doesn't change data only applies them and assigns the changed set as x
 
-y = titanic['Survived']
+y = new_titanic_df['Survived']
 
 lb = LabelEncoder()
 enc_y = lb.fit_transform(y) #fit_transform
