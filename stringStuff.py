@@ -10,13 +10,19 @@ def remStu(students, name):
     return nstudents
     
 students = remStu(students, "Sarah")
-print(students)
 
 def addStu(students, name, age, major) :
+    if isinstance(name, str) & isinstance(age, int) & isinstance(major, str) 
+    {
+
+    }
+
+
     students.append({"name":name, "age":age, "major":major})
     return students
 
 def findStu(students, name):
+    try:
     fstud = [stud for stud in students if stud.get("name") == name]
     return fstud 
 
