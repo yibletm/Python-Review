@@ -1,0 +1,5 @@
+inp = input("Enter a sentence: ")
+print(inp)
+print(inp.upper())
+print(inp.lower())
+print(inp.replace("the","a"))
