@@ -16,7 +16,7 @@ y = ds['Vaccination_Rate_%']
 print(y.shape)
 print(x.head())
 
-lb=LabelEncoder
+lb=LabelEncoder()
 
 x['data'] = lb.fit_transform(x['data'])
 x['Country'] = lb.fit_transform(x['Country'])
