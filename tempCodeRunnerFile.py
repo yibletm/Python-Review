@@ -1,1 +1,5 @@
-where contiuous values are made into something more discrete
+regressor = RandomForestClassifier(n_estimators=100, random_state=42)
+regressor.fit(scal_x_train, y_train)
+y_pred = regressor.predict(scal_x_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Random forest Accuracy: {accuracy * 100:.2f}%')
