@@ -5,6 +5,7 @@ from sklearn.datasets import load_iris
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score
 import seaborn as sns
 import os
@@ -23,12 +24,16 @@ y_pred = model.predict(scal_x_test)
 acc = accuracy_score(y_test, y_pred)
 print(f"Logistic Regression accuracy: {acc:.4f}")
 
+#Random Forest
+
 regressor = RandomForestClassifier(n_estimators=100, random_state=42)
 regressor.fit(scal_x_train, y_train)
 y_pred = regressor.predict(scal_x_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Random forest Accuracy: {accuracy * 100:.2f}%')
 
+
+#Cross Validation
 svm_classifier = SVC(kernel='linear')
 
 num_folds = 5
@@ -43,3 +48,15 @@ for i, result in enumerate(cross_val_results, 1):
     print(f"  Fold {i}: {result * 100:.2f}%")
     
 print(f'Mean Accuracy: {cross_val_results.mean()* 100:.2f}%')
+
+#Gradient Boosting
+
+
+gbc = GradientBoostingClassifier(n_estimators=300, learning_rate=0.05, random_state=100, max_features=5 )
+                                 
+gbc.fit(x_train, y_train)
+
+y_pred = gbc.predict(x_test)
+
+acc = accuracy_score(y_test, y_pred)
+print("Gradient Boosting Classifier accuracy is : {:.2f}".format(acc))
